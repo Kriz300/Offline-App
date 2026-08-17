@@ -1,7 +1,10 @@
 //import { useState } from 'react'
 //import ConnectionStatus from './components/connection/connectionStatus';
 //import SyncDataStatus from './components/sync/syncDataStatus';
-import Solicitudes from "./pages/solicitudes";
+import SolicitudList from "./pages/solicitudList";
+import SolicitudNew from "./pages/solicitudNew";
+import GroupList from "./pages/groupList";
+import GroupNew from "./pages/groupNew";
 import './App.css'
 
 function App() {
@@ -63,7 +66,11 @@ function App() {
             <header className="app-header">
                 <h1>Offline-First Notes App</h1>
             </header>
-            <Solicitudes />
+            <SolicitudNew />
+            <SolicitudList />
+            <h1>Offline-First Notes App</h1>
+            <GroupNew />
+            <GroupList />
             {/*
             <main className="app-main">
                 {isEditing ? (

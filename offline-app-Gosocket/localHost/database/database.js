@@ -19,6 +19,7 @@ export function initDatabase() {
     console.log("Creando tablas...");
     db.exec(`
         PRAGMA foreign_keys = ON;
+        DROP TABLE groups;
         
         CREATE TABLE IF NOT EXISTS solicitud (
             id TEXT PRIMARY KEY,
@@ -29,23 +30,23 @@ export function initDatabase() {
         );
         
         CREATE TABLE IF NOT EXISTS groups (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            nombre TEXT NOT NULL,
-            agrupacion_padre_id INTEGER,
+            id TEXT PRIMARY KEY,
+            Name TEXT NOT NULL,
+            Father_id TEXT,
 
-            FOREIGN KEY (agrupacion_padre_id)
+            FOREIGN KEY (Father_id)
                 REFERENCES groups(id)
                 ON DELETE CASCADE
         );
 
         CREATE TABLE IF NOT EXISTS group_solicitud (
-            group_id INTEGER NOT NULL,
-            solicitud_id INTEGER NOT NULL,
+            group_id TEXT NOT NULL,
+            solicitud_id TEXT NOT NULL,
 
             PRIMARY KEY (group_id, solicitud_id),
 
             FOREIGN KEY (group_id)
-                REFERENCES agrupaciones(id)
+                REFERENCES groups(id)
                 ON DELETE CASCADE,
 
             FOREIGN KEY (solicitud_id)

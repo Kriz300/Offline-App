@@ -12,7 +12,6 @@ router.get("/", (req, res) => {
                 error: "Error consultando SQLite"
             });
         }
-        console.log(rows);
         res.json(rows);
     }); 
 });
@@ -38,13 +37,15 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    const { Name, Payload, Status } = req.body;
+    const { Name, Payload } = req.body;
 
-    if (!Name || !Payload || !Status) {
+    if (!Name || !Payload) {
         return res.status(400).json({
             error: "Faltan datos"
         });
     }
+
+    const id = randomUUID();
 
     const result = db.run(`
         INSERT INTO solicitud (
@@ -54,7 +55,7 @@ router.post("/", (req, res) => {
                 Status
             )
             VALUES (?,?,?,?)
-        `,[randomUUID(), Name, Payload, Status],
+        `,[id, Name, Payload, "Pending"],
         (err, row) => {
             if (err) {
                 console.error("Error creando solicitud:", err);
@@ -69,7 +70,7 @@ router.post("/", (req, res) => {
                 Name,
                 Payload,
                 Status,
-                created_at
+                createdAt
             FROM solicitud
             WHERE id = ?
             `,
@@ -85,7 +86,7 @@ router.post("/", (req, res) => {
                 }
 
                 res.status(201).json({
-                    id: Text(result.lastInsertRowid),
+                    id: id,
                     message: "Ok 200"
                 });
             });
@@ -96,14 +97,14 @@ router.put("/:id", (req, res) => {
     const { id, Name } = req.body;
 
     db.run(`
-            UPDATE agrupaciones
+            UPDATE solicitud
             SET Name = ?
             WHERE id = ?
         `, [Name, id],
         (err, row) => {
             if (err) {
                 return res.status(500).json({
-                    error: "Error obteniendo comanda actualizada"
+                    error: "Error obteniendo solicitud actualizada"
                 });
             }
             res.json({
