@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("remoteApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+451b2f03d9cb85b223a3e5860f876d0005717d37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09ac1ffc8c96daec0200e49acd3316e473b74775")]
 [assembly: System.Reflection.AssemblyProductAttribute("remoteApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("remoteApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

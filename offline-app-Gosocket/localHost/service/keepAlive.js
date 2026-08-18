@@ -16,13 +16,9 @@ async function keepAlive() {
             return;
         }
 
-        console.log(
-            `KeepAlive OK: ${new Date().toISOString()}`
-        );
-        stopKeepAlive();
+        console.log(`KeepAlive OK: ${new Date().toISOString()}`);
         uploadPendings();
-        startKeepAlive();
-
+        
     } catch (error) {
         console.error(
             "KeepAlive: Error 500",

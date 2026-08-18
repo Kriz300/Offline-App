@@ -8,12 +8,19 @@ Instalar [.Net8](https://dotnet.microsoft.com/es-es/download/dotnet/8.0)
 ### Ejecución de procesos
 Frontend.
 ```
+cd offline-app-Gosocket
+npm run dev
 ```
 Local Backend.
 ```
+cd offline-app-Gosocket
+npm run server
 ```
 Remote Backend.
 ```
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet watch run
 ```
 ## Estructura 🛠️
 
@@ -26,8 +33,6 @@ Remote Backend.
 * **SQLite**
 * **Javascript**
 * **C#**
-
-
 
 ## Autores ✒️
 

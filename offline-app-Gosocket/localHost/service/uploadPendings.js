@@ -1,5 +1,6 @@
 import db from "./../database/database.js";
 import { sendSolicitud } from "./remoteApi.js";
+import { startKeepAlive, stopKeepAlive } from "./keepAlive.js";
 
 async function getPendings() {
     return new Promise((resolve, reject) => {
@@ -19,6 +20,7 @@ async function getPendings() {
 }
 
 export async function uploadPendings() {
+    stopKeepAlive();
     let getSolicitudes = await getPendings();
     
     for (const solicitud of getSolicitudes) {
@@ -36,7 +38,8 @@ export async function uploadPendings() {
             );
         }
     }
-    return "ok";
+    startKeepAlive();
+    return;
 }
 
 async function updateStatus(solicitudId, status) {

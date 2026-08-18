@@ -134,3 +134,4 @@ C:\Users\the_k\Desktop\Pruebas tecnicas\2026\Offline-App\Backend .Net\remoteApi\
 C:\Users\the_k\Desktop\Pruebas tecnicas\2026\Offline-App\Backend .Net\remoteApi\obj\Debug\net8.0\remoteApi.pdb
 C:\Users\the_k\Desktop\Pruebas tecnicas\2026\Offline-App\Backend .Net\remoteApi\obj\Debug\net8.0\remoteApi.genruntimeconfig.cache
 C:\Users\the_k\Desktop\Pruebas tecnicas\2026\Offline-App\Backend .Net\remoteApi\obj\Debug\net8.0\ref\remoteApi.dll
+C:\Users\the_k\Desktop\Pruebas tecnicas\2026\Offline-App\Backend .Net\remoteApi\obj\Debug\net8.0\remoteApi.sourcelink.json

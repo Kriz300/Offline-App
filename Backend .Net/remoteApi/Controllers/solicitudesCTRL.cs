@@ -55,7 +55,7 @@ public class SolicitudesController : ControllerBase
             Id = dto.Id,
             Name = dto.Name,
             Payload = dto.Payload,
-            status = "Processed",
+            Status = "Processed",
             createdAt = dto.createdAt,
         };
 
