@@ -8,6 +8,7 @@ interface SolicitudSelectorProps {
     onChange: (solicitudes: Solicitud[]) => void;
 }
 
+//Componente que permite seleccionar solicitudes para agregar a una agrupación
 export default function SolicitudSelector({
     solicitudes,
     solicitudesSeleccionadas,

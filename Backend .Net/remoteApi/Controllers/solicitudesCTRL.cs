@@ -6,6 +6,7 @@ using remoteApi.Models;
 
 namespace remoteApi.Controllers;
 
+//Recibe la solicitud enviada por la Api Local y la registra
 [ApiController]
 [Route("api/[controller]")]
 public class SolicitudesController : ControllerBase

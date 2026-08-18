@@ -1,3 +1,4 @@
+//Contiene todos los endpoint a los que apunta el Frontend cuando trabajo con solicitudes
 import express from "express";
 import { randomUUID } from "node:crypto";
 import db from "./../database/database.js";

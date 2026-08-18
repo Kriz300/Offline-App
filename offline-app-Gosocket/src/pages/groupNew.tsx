@@ -3,7 +3,8 @@ import { postGroup, getSolicitudes } from "./../services/offlineDB";
 import type { Solicitud } from "../types/solicitud";
 import SolicitudSelector from "./../components/solicitudes/solicitudSelector";
 
-function SolicitudNew() {
+//Crea una nueva agrupación
+function GroupNew() {
     const [name, setName] = useState<string>("");
     //const [father, setFather] = useState<string>("");
     const [solicitudes, setSolicitudes] = useState<Solicitud[]>([]);
@@ -133,4 +134,4 @@ function SolicitudNew() {
     );
 }
 
-export default SolicitudNew;
+export default GroupNew;

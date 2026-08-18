@@ -4,6 +4,7 @@ import type { Solicitud } from "./../types/solicitud";
 import SolicitudCard from "./../components/solicitudes/solicitudCard";
 import "./css/solicitudList.css";
 
+//Genera una grid de elementos Card correspondientes a las solicitudes
 function SolicitudList() {
     const [solicitudes, setSolicitudes] = useState<Solicitud[]>([]);
     const [loading, setLoading] = useState(true);

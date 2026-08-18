@@ -1,3 +1,4 @@
+//Elemento descartado que puede ser reutilizado para que el Backend Local muestre el estado de la conexión con el servidor principal
 //import React from 'react';
 import { useOnlineStatus } from '../../hooks/onlineStatus';
 import './ConnectionStatus.css';

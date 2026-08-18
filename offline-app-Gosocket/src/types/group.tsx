@@ -1,3 +1,4 @@
+//Estructuras relacionadas a las agrupaciones
 export interface Group {
     id: string;
     Name: string;

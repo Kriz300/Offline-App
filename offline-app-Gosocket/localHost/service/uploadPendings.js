@@ -2,6 +2,7 @@ import db from "./../database/database.js";
 import { sendSolicitud } from "./remoteApi.js";
 import { startKeepAlive, stopKeepAlive } from "./keepAlive.js";
 
+//Obtiene todas las solicitudes con estado pendiente
 async function getPendings() {
     return new Promise((resolve, reject) => {
         db.all(`SELECT * FROM solicitud WHERE Status = "Pending" ORDER BY createdAt ASC;`,
@@ -19,6 +20,7 @@ async function getPendings() {
     });
 }
 
+//Envia al Backend remoto las solicitudes pendientes
 export async function uploadPendings() {
     stopKeepAlive();
     let getSolicitudes = await getPendings();
@@ -42,6 +44,7 @@ export async function uploadPendings() {
     return;
 }
 
+//Actualiza el estado de las solicitudes pendientes a Procesadas
 async function updateStatus(solicitudId, status) {
     console.log(status);
     return new Promise((resolve, reject) => {

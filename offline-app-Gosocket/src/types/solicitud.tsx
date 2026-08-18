@@ -1,4 +1,4 @@
-//Pendiente de integrar con Backend Local
+//Estructuras relacionadas a las solicitudes
 export type SolicitudStatus =
     | "Pending"
     | "Processed"

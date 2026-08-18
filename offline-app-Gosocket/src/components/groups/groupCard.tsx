@@ -5,6 +5,7 @@
      group: GroupListed;
  }
  
+ //Componente que muestra los datos de una agrupación
  function GroupCard({ group }: Props) {
     console.log(group);
      return (

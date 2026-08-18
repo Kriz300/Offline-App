@@ -25,7 +25,7 @@ app.use(cors({
     ]
 }));
 
-app.get("/api/test", (req, res) => {
+/*app.get("/api/test", (req, res) => {
     db.all(`
             SELECT name
             FROM sqlite_master
@@ -39,7 +39,7 @@ app.get("/api/test", (req, res) => {
     console.log(rows);
     res.json(rows);
     });
-});
+});*/
 
 app.use("/api/agrupaciones", groupsRoutes);
 app.use("/api/solicitudes", solicitudesRoutes);

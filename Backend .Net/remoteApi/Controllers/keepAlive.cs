@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace remoteApi.Controllers;
-
+//Le responde al KeepAlive del Backend Local
 [ApiController]
 [Route("api/[controller]")]
 public class keepAliveController : ControllerBase

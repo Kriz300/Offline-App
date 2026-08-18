@@ -1,3 +1,4 @@
+//Elemento descartado que puede ser reutilizado para que el Backend Local muestre el estado de la conexión con el servidor principal
 import { useState, useEffect } from 'react';
 
 export const useOnlineStatus = () => {

@@ -1,3 +1,4 @@
+//Es capaz de registrar, generar y poner a disposición de la api las funciones que existen en la carpeta types de forma automatica.
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";

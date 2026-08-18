@@ -5,6 +5,7 @@ interface Props {
     solicitud: Solicitud;
 }
 
+//Componente que muestra los datos de una solicitud
 function SolicitudCard({ solicitud }: Props) {
     return (
         <article className="solicitud-card">

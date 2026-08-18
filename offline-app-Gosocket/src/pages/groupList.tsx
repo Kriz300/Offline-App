@@ -4,7 +4,8 @@ import type { Group } from "./../types/group";
 import GroupCard from "./../components/groups/groupCard";
 import "./css/groupList.css"
 
-function SolicitudList() {
+//Genera una grid de elementos Card correspondientes a las agrupaciones
+function GroupList() {
     const [groups, setGroups] = useState<Group[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<null|string>(null);
@@ -59,4 +60,4 @@ function SolicitudList() {
     );
 }
 
-export default SolicitudList;
+export default GroupList;

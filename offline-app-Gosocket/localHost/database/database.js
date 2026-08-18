@@ -1,5 +1,7 @@
+//Crea la base de datos y sus tablas si no existen.
 import sqlite3 from "sqlite3";
 
+//Puntero a la base de datos para el uso de la api
 const db = new sqlite3.Database("./data/DB.db", (err) => {
     if (err) {
         console.error("Error al conectar con SQLite:", err.message);
@@ -8,7 +10,7 @@ const db = new sqlite3.Database("./data/DB.db", (err) => {
     }
 });
 
-/* db.run To Do:
+/* db.exec To Do:
 ** Pasar de grupos en relación 1:N a M:N
 ** Generar proceso para evitar ciclos:
 ** Opción 1: Trigger en SQL

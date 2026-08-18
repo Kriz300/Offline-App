@@ -5,6 +5,7 @@ const INTERVAL = process.env.VITE_SYNC_INTERVAL;//30_000;
 
 let timer = null;
 
+//Funcion que se aegura que el servidor remoto sea alcanzable y este respondiendo solicitudes
 async function keepAlive() {
     try {
         const response = await fetch(`${REMOTE_URL}/keepalive`);
@@ -27,6 +28,7 @@ async function keepAlive() {
     }
 }
 
+//Inicia el componente KeepAlive
 export function startKeepAlive() {
 
     if (timer) {
@@ -40,6 +42,7 @@ export function startKeepAlive() {
     );
 }
 
+//Detiene el componente KeepAlive
 export function stopKeepAlive() {
 
     if (timer) {

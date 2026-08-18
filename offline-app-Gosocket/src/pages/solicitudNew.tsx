@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { postSolicitud } from "./../services/offlineDB";
 
+//Crea una nueva solicitud
 function SolicitudNew() {
     const [name, setName] = useState<string>("");
     const [payload, setPayload] = useState<string>("");

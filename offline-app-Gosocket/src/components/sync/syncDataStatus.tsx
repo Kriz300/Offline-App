@@ -1,3 +1,4 @@
+//Elemento descartado que puede ser reutilizado para que el Backend Local muestre el estado de la conexión con el servidor principal
 import React, { useEffect, useState } from 'react';
 import { subscribeToSyncStatus } from '../../services/syncService';
 import { statusText } from '../../shared/syncStatus';

@@ -1,8 +1,10 @@
+//Contiene las funciones para interactuar con el backend local
 import type { newSolicitud } from "./../types/solicitud";
 import type { newGroup } from "./../types/group";
 
 const API_URL = import.meta.env.VITE_LOCAL_API_URL;
 
+//Obtiene todas las solicitudes almacenadas localmente
 export async function getSolicitudes() {
     console.log(`URL: ${API_URL}/solicitudes`);
     const response = await fetch(`${API_URL}/solicitudes`);
@@ -14,6 +16,7 @@ export async function getSolicitudes() {
     return response.json();
 }
 
+//Envia una nueva solicitud para que el backend local la procese
 export async function postSolicitud(
     data: newSolicitud
 ): Promise<newSolicitud> {
@@ -32,8 +35,8 @@ export async function postSolicitud(
     return response.json();
 }
 
+//Obtiene todas las agrupaciones almacenadas localmente
 export async function getGroups() {
-    console.log(`URL: ${API_URL}/solicitudes`);
     const response = await fetch(`${API_URL}/agrupaciones`);
 
     if (!response.ok) {
@@ -43,6 +46,7 @@ export async function getGroups() {
     return response.json();
 }
 
+//Envia una nueva agrupación para que el backend local la procese
 export async function postGroup(
     data: newGroup
 ): Promise<newGroup> {

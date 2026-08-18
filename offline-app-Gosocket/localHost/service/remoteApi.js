@@ -1,5 +1,6 @@
 const REMOTE_URL = process.env.VITE_REMOTE_API_URL;
 
+//Envia las solicitudes al Backend Remoto
 export async function sendSolicitud(solicitud) {
     const response = await fetch(`${REMOTE_URL}/solicitudes`, {
         method: "POST",
