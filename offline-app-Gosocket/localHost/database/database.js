@@ -19,8 +19,8 @@ export function initDatabase() {
     console.log("Creando tablas...");
     db.exec(`
         PRAGMA foreign_keys = ON;
-        DROP TABLE groups;
         
+        /*Agregar type */
         CREATE TABLE IF NOT EXISTS solicitud (
             id TEXT PRIMARY KEY,
             Name TEXT NOT NULL,

@@ -1,0 +1,19 @@
+@remoteApi_HostAddress = http://localhost:5228
+
+### Crear solicitud
+POST {{remoteApi_HostAddress}}/api/solicitudes
+Content-Type: application/json
+
+{
+    "nombre": "Solicitud de prueba",
+    "descripcion": "Solicitud enviada desde el archivo HTTP"
+}
+
+### Obtener todas las solicitudes
+GET {{remoteApi_HostAddress}}/api/solicitudes
+Accept: application/json
+
+### Obtener una solicitud por ID
+# Reemplaza el GUID por uno obtenido al crear una solicitud
+GET {{remoteApi_HostAddress}}/api/solicitudes/00000000-0000-0000-0000-000000000000
+Accept: application/json

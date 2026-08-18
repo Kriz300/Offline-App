@@ -1,11 +1,17 @@
+import "dotenv/config";
+
 import express from "express";
 import cors from "cors";
 
 import db from "./database/database.js";
 import { initDatabase } from "./database/database.js";
+import { startKeepAlive } from "./service/keepAlive.js";
 
 import groupsRoutes from "./routes/groups.js"
 import solicitudesRoutes from "./routes/solicitudes.js"
+
+//import functions from "./service/process/index.js";
+//functions.Template();
 
 const app = express();
 initDatabase();
@@ -37,6 +43,8 @@ app.get("/api/test", (req, res) => {
 
 app.use("/api/agrupaciones", groupsRoutes);
 app.use("/api/solicitudes", solicitudesRoutes);
+
+startKeepAlive();
 
 app.listen(3000, () => {
     console.log("Backend funcionando en http://localhost:3000");

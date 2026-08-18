@@ -80,7 +80,7 @@ router.get("/:id", (req, res) => {
     db.get(`SELECT * FROM groups WHERE id = ?;`,
         [req.params.id],
         (err, row) => {
-            if (!err) {
+            if (err) {
                  console.error("Error obteniendo agrupación:", err);
 
                 return res.status(500).json({
